@@ -1,7 +1,7 @@
 # AquilegiaVulgaris
 Assembly and analysis of Aquilegia vulgaris genome. <br/>
 
-## Step one: Assemble and Correct 
+## Step one: Assemble and correct contigs
 Calculate genome size <br/>
 Assemble the long reads into contigs using Canu <br/>
 Correct using long and short reads (PCR free) <br/>
