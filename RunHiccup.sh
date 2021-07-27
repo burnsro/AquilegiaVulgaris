@@ -27,8 +27,6 @@ hicup --config ${myconf} --threads 8
 #After running hiccup process sam file to visualize in juicer for rearrangements
 #In juicer you can make rearrangments manually and it will output a text file of what regions to change 
 #Can then run juicer script to make these changes to the fasta file
-#other tools for visualization also available (but juicer more interactive)
-
 
 cd $outdir
 #here each assembled scaffold is called "chr" followed by number
