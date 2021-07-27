@@ -1,12 +1,13 @@
 # AquilegiaVulgaris
 Assembly and analysis of Aquilegia vulgaris genome. <br/>
 
-## Step one: Assemble  
+## Step one: Assemble and Correct 
+Calculate genome size <br/>
 Assemble the long reads into contigs using Canu <br/>
-Scaffold the contigs using the available genome sequences of Aquilegia using RagTag <br/>
+Correct using long and short reads (PCR free) <br/>
 
-## Step two: Correct
-Correct the scaffolded assembly using long reads and PCR free short reads <br/>
+## Step two: Scaffold
+Using available genome sequences and the software RagTag <br/>
 
 ## Step three: Annotate repeats and mask the genome
 Annotate transposable elements using RepeatModeler2 <br/>
