@@ -9,7 +9,7 @@
 
 #### N in the batch job is how many fastq files was generated from Nanopore, change accordingly
 
-#have nglmr in your conda en
+#have nglmr in your conda env
 ml anaconda3/2019.03
 source activate /groups/nordborg/projects/suecica/005scripts/001Software/RobinCondaSCRATCH/
 ml samtools/1.9-foss-2018b
