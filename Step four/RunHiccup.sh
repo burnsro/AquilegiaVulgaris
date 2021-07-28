@@ -31,7 +31,7 @@ hicup --config ${myconf} --threads 8
 cd $outdir
 #here each assembled scaffold is called "chr" followed by number
 sam=DLF21.hiccup.sam
-preinput=DLF21.hiccup.txt
+preinput=DLF21_hiccup
 
 samtools view $sam | awk 'BEGIN {FS="\t"; OFS="\t"} {name1=substr($1,0,length($1)-2); str1=and($2,16); chr1=$3; pos1=$4; mapq1=$5; getline; name2=substr($1,0,length($1)-2); str2=and($2,16); chr2=$3; pos2=$4; mapq2=$5; if(name1==name2) { if (chr1>chr2){print name1, str2, "chr" chr2, pos2,1, str1, "chr" chr1, pos1, 0, mapq2, mapq1} else {print name1, str1, "chr" chr1, pos1, 0, str2, "chr" chr2, pos2 ,1, mapq1, mapq2}}}' | awk  '{gsub("\tchr\t","\thpv\t",$0); print;}' | sort -k3,3d -k7,7d > $preinput
 
