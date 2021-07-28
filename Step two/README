@@ -1,1 +1,9 @@
-Scaffold the corrected contigs using publically avaiable genomes for Aquilegia
+Scaffold the corrected contigs using publically avaiable genomes for Aquilegia and the software RagTag
+
+https://github.com/malonge/RagTag
+
+2 aquilegia genomes are currently publically available
+Aq coerulea ‘Goldsmith’ https://elifesciences.org/articles/36426
+Aq oxysepala var. kansuensis https://www.nature.com/articles/s41438-020-0328-y
+
+Aim would be to try both and check consistency in scaffolding as a transposition exists in Aq oxysepala compared to Aq coerulea involving Chr4
