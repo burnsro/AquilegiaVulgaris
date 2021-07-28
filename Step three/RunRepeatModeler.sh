@@ -15,7 +15,7 @@ source activate /groups/nordborg/projects/suecica/005scripts/001Software/RobinCo
 out='/scratch-cbe/users/robin.burns/004Aquilegia'
 
 #First build database
-BuildDatabase -engine ncbi -name Aq_database Aq.ragoo_scaffolds.fasta
+BuildDatabase -engine ncbi -name DLF21_database DLF21.scaffolds.fasta
 
 perl /groups/nordborg/projects/suecica/005scripts/001Software/RepeatModeler-2.0.1/RepeatModeler -database Aq_database -pa 16 -LTRStruct \
 -rmblast_dir /software/2020/software/rmblast/2.10.0-foss-2018b/bin/ \
