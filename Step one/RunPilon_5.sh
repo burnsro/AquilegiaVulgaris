@@ -32,7 +32,7 @@ cd $out
 java -Xmx70g -Djava.io.tmpdir=/scratch-cbe/users/robin.burns/tmp/ -jar /groups/nordborg/projects/suecica/005scripts/001Software/pilon-1.23.jar \
 --genome ${ref} \
 --frags ${out}/$acc.sort.bam \
---output DLF21.contigs_raconpilon.dir \ #finished corrected assembly
+--output DLF21.contigs_raconpilon.fasta \ #finished corrected assembly
 --outdir ${out} --threads 16 --K 73  
 
 #you can re run pilon for another round, but no more than twice. Once is arguably enough. 
