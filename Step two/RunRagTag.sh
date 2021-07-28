@@ -12,8 +12,7 @@ source activate /groups/nordborg/projects/suecica/005scripts/001Software/RobCond
 
 ref1=Aqc.fasta 
 ref2=Aqo.fasta
-query=Aqv.contigs_corrected.fasta
-
+query=DLF21.contigs_raconpilon.fasta
 out='/scratch-cbe/users/robin.burns/004Aquilegia/Scaffolds'
 
 # scaffold with multiple references/maps
@@ -23,3 +22,5 @@ ragtag.py merge ${query} out_*/*.agp other.map.agp
 
 # Optional use Hi-C to resolve conflicts
 ragtag.py merge -b Aqv.hic.sort.bam query.fasta out_*/*.agp other.map.agp
+
+mv ragtag.merge.fasta DLF21.scaffolds.fasta
