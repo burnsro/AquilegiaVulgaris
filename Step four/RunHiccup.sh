@@ -14,12 +14,12 @@ ml r/3.5.1-foss-2018b
 
 myconf='aquilegia_configuration.conf'
 
-
+Aqgenome=DLF21.scaffolds.fasta
 #first make digested file of the genome using the restriction enzyme used in the hic library
 #here dpnii as it is not altered by methylation 
 #Make sure the genome is repeat masked first and the genome has been indexed with bowtie2
 
-hicup_digester --genome Aq_maskedDisgested --re1 ^GATC,DpnII ${Aqgenome}
+hicup_digester --genome DLF21_maskedDisgested --re1 ^GATC,DpnII ${Aqgenome}
 
 #Check configuration file and change paths accordingly of digestion file and index file and where the raw reads and the output will go
 hicup --config ${myconf} --threads 8
@@ -30,8 +30,8 @@ hicup --config ${myconf} --threads 8
 
 cd $outdir
 #here each assembled scaffold is called "chr" followed by number
-sam=Aq.hiccup.sam
-preinput=Aq.hiccup.txt
+sam=DLF21.hiccup.sam
+preinput=DLF21.hiccup.txt
 
 samtools view $sam | awk 'BEGIN {FS="\t"; OFS="\t"} {name1=substr($1,0,length($1)-2); str1=and($2,16); chr1=$3; pos1=$4; mapq1=$5; getline; name2=substr($1,0,length($1)-2); str2=and($2,16); chr2=$3; pos2=$4; mapq2=$5; if(name1==name2) { if (chr1>chr2){print name1, str2, "chr" chr2, pos2,1, str1, "chr" chr1, pos1, 0, mapq2, mapq1} else {print name1, str1, "chr" chr1, pos1, 0, str2, "chr" chr2, pos2 ,1, mapq1, mapq2}}}' | awk  '{gsub("\tchr\t","\thpv\t",$0); print;}' | sort -k3,3d -k7,7d > $preinput
 
