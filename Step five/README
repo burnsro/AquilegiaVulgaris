@@ -1,2 +1,4 @@
 Gene annotation using a 3 tier approach 
 Homology, de-novo prediction and RNA transcriptome
+
+Alternatively can run liftover but reference bias is an issue https://github.com/agshumate/Liftoff
