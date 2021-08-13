@@ -36,7 +36,7 @@ STAR --runThreadN 8 \
 
 #Map reads
 STAR --runThreadN 16 \
-        --genomeDir $out/myAqTEgenome \
+        --genomeDir $out/myAqgenome \
         --readFilesIn $raw/$acc.1.fastq.gz $raw/$acc.2.fastq.gz \
         --readFilesCommand zcat \
         --outFilterMultimapNmax 1 \
